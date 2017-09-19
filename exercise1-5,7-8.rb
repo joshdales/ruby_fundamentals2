@@ -52,36 +52,64 @@ end
 #Exercise 8
 
 def speed(distance_in_metres, time_in_minutes)
-  distance.to_f/(time.to_f / 60)
+  distance_in_metres.to_f/(time_in_minutes.to_f * 60)
 end
 
-puts "How far did person 1 run (in metres)?"
-distance1 = gets.to_f
-puts "How long (in minutes) did person 1 run take to run #{distance1} metres?"
-mins1 = gets.to_f
+persons = []
+counter = 1
 
-puts "How far did person 2 run (in metres)?"
-distance2 = gets.to_f
-puts "How long (in minutes) did person 2 take to run #{distance2} metres?"
-mins2 = gets.to_f
-
-puts "How far did person 3 run (in metres)?"
-distance3 = gets.to_f
-puts "How long (in minutes) did person 3 take to run #{distance3} metres?"
-mins3 = gets.to_f
-
-speed1 = speed(distance1/mins1)
-speed2 = speed(distance2/mins2)
-speed3 = speed(distance3/mins3)
-
-if speed3 > speed2 && speed3 > speed1
-  puts "Person 3 was the fastest at #{speed3} m/s"
-elsif speed2 > speed3 && speed2 > speed1
-  puts "Person 2 was the fastest at #{speed2} m/s"
-elsif speed1 > speed3 && speed1 > speed2
-  puts "Person 1 was the fastest at #{speed1} m/s"
-elsif speed1 == speed2 && speed2 == speed3
-  puts "Everyone tied at #{speed1} m/s"
-else
-  puts "Well done everyone!"
+3.times do
+  puts "distance?"
+  user_distance = gets
+  puts "time?"
+  user_time = gets
+  person = ["person #{counter}", speed(user_distance, user_time)]
+  persons << person
+  counter += 1
 end
+
+p persons
+
+# persons = [person1, person2, person3]
+# distance = [distance1, distance2, distance3]
+# mins = [mins1, mins2, mins3]
+#
+# for person in persons do
+#   puts "How far did this person run (in metres)?"
+#   distance = gets.chomp
+#   puts "How long (in minutes) did it take this person  run take to run #{distance} metres?"
+#   mins = gets.chomp
+#   puts "They ran #{speed(distance/mins)}"
+# end
+
+
+# puts "How far did person 1 run (in metres)?"
+# distance1 = gets.to_f
+# puts "How long (in minutes) did person 1 run take to run #{distance1} metres?"
+# mins1 = gets.to_f
+#
+# puts "How far did person 2 run (in metres)?"
+# distance2 = gets.to_f
+# puts "How long (in minutes) did person 2 take to run #{distance2} metres?"
+# mins2 = gets.to_f
+#
+# puts "How far did person 3 run (in metres)?"
+# distance3 = gets.to_f
+# puts "How long (in minutes) did person 3 take to run #{distance3} metres?"
+# mins3 = gets.to_f
+
+# speed1 = speed(distance1/mins1)
+# speed2 = speed(distance2/mins2)
+# speed3 = speed(distance3/mins3)
+#
+# if speed3 > speed2 && speed3 > speed1
+#   puts "Person 3 was the fastest at #{speed3} m/s"
+# elsif speed2 > speed3 && speed2 > speed1
+#   puts "Person 2 was the fastest at #{speed2} m/s"
+# elsif speed1 > speed3 && speed1 > speed2
+#   puts "Person 1 was the fastest at #{speed1} m/s"
+# elsif speed1 == speed2 && speed2 == speed3
+#   puts "Everyone tied at #{speed1} m/s"
+# else
+#   puts "Well done everyone!"
+# end
