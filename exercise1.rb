@@ -20,3 +20,12 @@ def is_even?(my_number)
     false
   end
 end
+
+#Exercise 4
+def longer_than_8?(my_string)
+  if my_string.length >= 8
+    true
+  else
+    false
+  end
+end
