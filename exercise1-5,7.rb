@@ -39,3 +39,12 @@ end
 def wrap_text(word, wrap)
   return "#{wrap}#{word}#{wrap}"
 end
+
+# irb(main):004:0> wrap_text('new message', '###')
+# => "###new message###"
+# irb(main):005:0> text_wrap1 = wrap_text('new message', '###')
+# => "###new message###"
+# irb(main):006:0> text_wrap2 = wrap_text(text_wrap1, '===')
+# => "===###new message###==="
+# irb(main):007:0> wrap_text(text_wrap2, '---')
+# => "---===###new message###===---"
