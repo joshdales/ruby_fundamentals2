@@ -59,9 +59,9 @@ persons = []
 counter = 1
 
 3.times do
-  puts "distance?"
+  puts "How far did this person run (in metres)?"
   user_distance = gets
-  puts "time?"
+  puts "How long (in minutes) did it take this person take to run take to run #{user_distance} metres??"
   user_time = gets
   person = ["person #{counter}", speed(user_distance, user_time)]
   persons << person
@@ -70,6 +70,17 @@ end
 
 p persons
 
+if persons[0][1] > persons[1][1] && persons[0][1] > persons[2][1]
+  puts "Person 1 is the fastest"
+elsif persons[1][1] > persons[2][1] && persons[1][1] > persons[0][1]
+  puts "Person 2 is the fastest"
+elsif persons[2][1] > persons[0][1] && persons[2][1] > persons[1][1]
+  puts "Person 3 is the fastest"
+elsif persons[1][1] == persons[2][1] && persons[2][1] == persons[0][1]
+  puts "Everyone tied with the same speed of #{persons[1][1]}m/s."
+else
+  puts "Well done everyone!"
+end
 # persons = [person1, person2, person3]
 # distance = [distance1, distance2, distance3]
 # mins = [mins1, mins2, mins3]
