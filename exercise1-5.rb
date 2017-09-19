@@ -34,3 +34,8 @@ end
 def greet_backwards(name)
   puts "Hello, #{name.reverse}#{name.reverse}! Welcome home."
 end
+
+#Exercise 7
+def wrap_text(word, wrap)
+  return "#{wrap}#{word}#{wrap}"
+end
