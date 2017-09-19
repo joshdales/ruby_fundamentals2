@@ -29,3 +29,8 @@ def longer_than_8?(my_string)
     false
   end
 end
+
+#Exercise 5
+def greet_backwards(name)
+  puts "Hello, #{name.reverse}! Welcome home."
+end
