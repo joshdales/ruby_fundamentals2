@@ -28,6 +28,8 @@ else
   puts "Well done everyone!"
 end
 
+# Complicated attempt
+
 # persons = []
 # counter = 1
 #
