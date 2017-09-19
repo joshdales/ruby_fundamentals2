@@ -32,5 +32,5 @@ end
 
 #Exercise 5
 def greet_backwards(name)
-  puts "Hello, #{name.reverse}! Welcome home."
+  puts "Hello, #{name.reverse}#{name.reverse}! Welcome home."
 end
